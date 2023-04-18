@@ -62,6 +62,7 @@ namespace RPSLS
         {
             Console.WriteLine($"{playerOne.name} choose {playerOne.chosenGesture}");
             Console.WriteLine($"{playerTwo.name} choose {playerTwo.chosenGesture}");
+            Console.WriteLine();
             if (playerOne.chosenGesture == "Rock" && playerTwo.chosenGesture == "Rock")
             {
                 Console.WriteLine($"Rock hangs out with Rock.\n{playerOne.name} and {playerTwo.name} tied");
@@ -257,7 +258,9 @@ namespace RPSLS
             while (playerOne.score < 2 && playerTwo.score < 2)
             {
                 playerOne.ChooseGesture();
+                Console.WriteLine();
                 playerTwo.ChooseGesture();
+                Console.WriteLine();
                 CompareGestures();
             }
             if (playerOne.score == 2 || playerTwo.score == 2)
